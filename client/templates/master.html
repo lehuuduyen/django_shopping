@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]>
+<html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<!-- Mirrored from www.vasterad.com/themes/trizzy/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2019 16:44:05 GMT -->
+{% load staticfiles %}
+
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Trizzy</title>
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom_css.css' %}">
+    <link rel="stylesheet" href="{% static 'css/colors/green.css' %}" id="colors">
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="boxed">
+    <div id="wrapper">
+
+
+        <!-- Top Bar
+    ================================================== -->
+        <!--<div id="top-bar">-->
+        <!--<div class="container">-->
+
+        <!--&lt;!&ndash; Top Bar Menu &ndash;&gt;-->
+        <!--<div class="ten columns">-->
+        <!--<ul class="top-bar-menu">-->
+        <!--<li><i class="fa fa-phone"></i> (564) 123 4567</li>-->
+        <!--<li><i class="fa fa-envelope"></i> <a href="#"><span class="__cf_email__"-->
+        <!--data-cfemail="1d707c74715d78657c706d7178337e7270">[email&#160;protected]</span></a>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<div class="top-bar-dropdown">-->
+        <!--<span>English</span>-->
+        <!--<ul class="options">-->
+        <!--<li>-->
+        <!--<div class="arrow"></div>-->
+        <!--</li>-->
+        <!--<li><a href="#">English</a></li>-->
+        <!--<li><a href="#">Polish</a></li>-->
+        <!--<li><a href="#">Deutsch</a></li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<div class="top-bar-dropdown">-->
+        <!--<span>USD</span>-->
+        <!--<ul class="options">-->
+        <!--<li>-->
+        <!--<div class="arrow"></div>-->
+        <!--</li>-->
+        <!--<li><a href="#">USD</a></li>-->
+        <!--<li><a href="#">PLN</a></li>-->
+        <!--<li><a href="#">EUR</a></li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--</li>-->
+        <!--</ul>-->
+        <!--</div>-->
+
+        <!--&lt;!&ndash; Social Icons &ndash;&gt;-->
+        <!--<div class="six columns">-->
+        <!--<ul class="social-icons">-->
+        <!--<li><a class="facebook" href="#"><i class="icon-facebook"></i></a></li>-->
+        <!--<li><a class="twitter" href="#"><i class="icon-twitter"></i></a></li>-->
+        <!--<li><a class="dribbble" href="#"><i class="icon-dribbble"></i></a></li>-->
+        <!--<li><a class="gplus" href="#"><i class="icon-gplus"></i></a></li>-->
+        <!--<li><a class="pinterest" href="#"><i class="icon-pinterest"></i></a></li>-->
+        <!--</ul>-->
+        <!--</div>-->
+
+        <!--</div>-->
+        <!--</div>-->
+
+        <div class="clearfix"></div>
+
+
+        <!-- Header
+    ================================================== -->
+        <div class="container" style="margin-top: 46px;">
+            <!-- Logo -->
+            <div class="four columns">
+                <div id="logo">
+                    <h1>
+                        <a href="index.html"><img src="{% static 'images/logo.png' %}" alt="Trizzy" /></a>
+                    </h1>
+                </div>
+            </div>
+            <!-- Additional Menu -->
+            <div class="twelve columns">
+                <div id="additional-menu">
+                    <ul>
+                        <li><a href="shopping-cart.html">Shopping Cart</a></li>
+                        <!--<li><a href="wishlist.html">WishList <span>(2)</span></a></li>-->
+                        <li><a href="checkout-billing-details.html">Checkout</a></li>
+
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <!-- Navigation
+    ================================================== -->
+        <div class="container container_menu">
+            <div class="sixteen columns">
+
+                <a href="#menu" class="menu-trigger"><i class="fa fa-bars"></i> Menu</a>
+
+                <nav id="navigation">
+                    <ul class="menu" id="responsive">
+
+                        <li><a href="/" class="current homepage" id="current">Home</a></li>
+
+                        <li class="dropdown">
+                            <a href="#">Shop</a>
+                            <ul>
+                                {% for category in categories%}
+                                <li><a href="/category/{{category.path_name}}">{{category.name}}</a></li>
+
+
+
+
+                                {% endfor%}
+
+
+
+
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Features</a>
+                            <div class="mega">
+                                <div class="mega-container">
+
+                                    <div class="one-column">
+                                        <ul>
+                                            <li><span class="mega-headline">Example Pages</span></li>
+                                            <li><a href="contact.html">Contact</a></li>
+
+
+
+
+                                        </ul>
+                                    </div>
+
+                                    <div class="one-column">
+                                        <ul>
+                                            <li><span class="mega-headline">Featured Pages</span></li>
+
+                                            <li><a href="shop-with-sidebar.html">Default Shop</a></li>
+                                            <li><a href="blog-masonry.html">Masonry Blog</a></li>
+                                            <li><a href="variable-product-page.html">Variable Product</a></li>
+
+                                        </ul>
+                                    </div>
+                                    <div class="one-fourth-column hidden-on-mobile">
+                                        <a href="#" class="img-caption margin-reset">
+                                            <figure>
+                                                <img src="{% static 'images/menu-banner-01.jpg' %}" alt="" />
+                                                <figcaption>
+                                                    <h3>Jeans</h3>
+                                                    <span>Pack for Style</span>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                    </div>
+
+                                    <div class="one-fourth-column hidden-on-mobile">
+                                        <a href="#" class="img-caption margin-reset">
+                                            <figure>
+                                                <img src="{% static 'images/menu-banner-02.jpg' %}" alt="" />
+                                                <figcaption>
+                                                    <h3>Sunglasses</h3>
+                                                    <span>Nail the Basics</span>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                    </div>
+
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Shopping Cart -->
+            <div class="twelve columns" style="width: 97%!important;">
+
+                <div id="cart">
+
+                    <!-- Button -->
+                    <div class="cart-btn">
+                        <a href="#" class="button adc">$178.00</a>
+                    </div>
+
+                    <div class="cart-list">
+
+                        <div class="arrow"></div>
+
+                        <div class="cart-amount">
+                            <span>2 items in the shopping cart</span>
+                        </div>
+
+                        <ul>
+                            <li>
+                                <a href="#"><img src="{%static 'images/small_product_list_08.jpg' %}" alt="" /></a>
+                                <a href="#">Converse All Star Trainers</a>
+                                <span>1 x $79.00</span>
+                                <div class="clearfix"></div>
+                            </li>
+
+                            <li>
+                                <a href="#"><img src="{%static 'images/small_product_list_09.jpg' %}" alt="" /></a>
+                                <a href="#">Tommy Hilfiger <br/> Shirt Beat</a>
+                                <span>1 x $99.00</span>
+                                <div class="clearfix"></div>
+                            </li>
+                        </ul>
+
+                        <div class="cart-buttons button">
+                            <a href="shopping-cart.html" class="view-cart"><span
+                                data-hover="View Cart"><span>View Cart</span></span></a>
+                            <a href="checkout-billing-details.html" class="checkout"><span
+                                data-hover="Checkout">Checkout</span></a>
+                        </div>
+                        <div class="clearfix">
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Search -->
+                <nav class="top-search">
+                    <form action="#" method="get">
+                        <button><i class="fa fa-search"></i></button>
+                        <input class="search-field" type="text" placeholder="Search" value="" />
+                    </form>
+                </nav>
+
+            </div>
+        </div>
+        {% block body %} {% endblock %}
+
+
+        <!-- Footer
+    ================================================== -->
+        <div id="footer">
+
+            <!-- Container -->
+            <div class="container">
+
+                <div class="four columns">
+                    <img src="{% static 'images/logo-footer.png' %}" alt="" class="margin-top-10" />
+                    <p class="margin-top-15">Nulla facilisis feugiat magna, ut molestie metus hendrerit vitae. Vivamus tristique lectus at varius rutrum. Integer lobortis mauris non consectetur eleifend.</p>
+                </div>
+
+                <div class="four columns">
+
+                    <!-- Headline -->
+                    <h3 class="headline footer">Customer Service</h3>
+                    <span class="line"></span>
+                    <div class="clearfix"></div>
+
+                    <ul class="footer-links">
+                        <li><a href="#">Order Status</a></li>
+                        <li><a href="#">Payment Methods</a></li>
+                        <li><a href="#">Delivery & Returns</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="four columns">
+
+                    <!-- Headline -->
+                    <h3 class="headline footer">My Account</h3>
+                    <span class="line"></span>
+                    <div class="clearfix"></div>
+
+                    <ul class="footer-links">
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order History</a></li>
+                        <li><a href="#">Wish List</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="four columns">
+
+                    <!-- Headline -->
+                    <h3 class="headline footer">Newsletter</h3>
+                    <span class="line"></span>
+                    <div class="clearfix"></div>
+                    <p>Sign up to receive email updates on new product announcements, gift ideas, special promotions, sales and more.</p>
+
+                    <form action="#" method="get">
+                        <button class="newsletter-btn" type="submit">Join</button>
+                        <input class="newsletter" type="text" placeholder="mail@example.com" value="" />
+                    </form>
+                </div>
+
+            </div>
+            <!-- Container / End -->
+
+        </div>
+        <!-- Footer / End -->
+
+        <!-- Footer Bottom / Start -->
+        <div id="footer-bottom">
+
+            <!-- Container -->
+            <div class="container">
+
+                <!--<div class="eight columns">© Copyright 2019 by <a href="#">Duyen - Quang</a>. All Rights Reserved.</div>-->
+                <div class="eight columns">
+                    <ul class="payment-icons">
+                        <li><img src="{% static 'images/visa.png' %}" alt="" /></li>
+                        <li><img src="{% static 'images/mastercard.png' %}" alt="" /></li>
+                        <li><img src="{% static 'images/skrill.png' %}" alt="" /></li>
+                        <li><img src="{% static 'images/moneybookers.png' %}" alt="" /></li>
+                        <li><img src="{% static 'images/paypal.png' %}" alt="" /></li>
+                    </ul>
+                </div>
+
+            </div>
+            <!-- Container / End -->
+
+        </div>
+        <!-- Footer Bottom / End -->
+
+        <!-- Back To Top Button -->
+        <div id="backtotop">
+            <a href="#"></a>
+        </div>
+
+    </div>
+
+
+    <!-- Java Script
+================================================== -->
+
+    <script src="{% static 'scripts/jquery-1.11.0.min.js'%}"></script>
+    <script src="{% static 'scripts/jquery-migrate-1.2.1.min.js'%}"></script>
+    <script src="{% static 'scripts/jquery.jpanelmenu.js'%}"></script>
+    <script src="{% static 'scripts/jquery.themepunch.plugins.min.js'%}"></script>
+    <script src="{% static 'scripts/jquery.themepunch.revolution.min.js'%}"></script>
+    <script src="{% static 'scripts/jquery.themepunch.showbizpro.min.js'%}"></script>
+    <script src="{% static 'scripts/jquery.magnific-popup.min.js'%}"></script>
+    <script src="{% static 'scripts/hoverIntent.js'%}"></script>
+    <script src="{% static 'scripts/superfish.js'%}"></script>
+    <script src="{% static 'scripts/jquery.pureparallax.js'%}"></script>
+    <script src="{% static 'scripts/jquery.pricefilter.js'%}"></script>
+    <script src="{% static 'scripts/jquery.selectric.min.js'%}"></script>
+    <script src="{% static 'scripts/jquery.royalslider.min.js'%}"></script>
+    <script src="{% static 'scripts/SelectBox.js'%}"></script>
+    <script src="{% static 'scripts/modernizr.custom.js'%}"></script>
+    <script src="{% static 'scripts/waypoints.min.js'%}"></script>
+    <script src="{% static 'scripts/jquery.flexslider-min.js'%}"></script>
+    <script src="{% static 'scripts/jquery.counterup.min.js'%}"></script>
+    <script src="{% static 'scripts/jquery.tooltips.min.js'%}"></script>
+    <script src="{% static 'scripts/jquery.isotope.min.js'%}"></script>
+    <script src="{% static 'scripts/puregrid.js'%}"></script>
+    <script src="{% static 'scripts/stacktable.js'%}"></script>
+    <script src="{% static 'scripts/custom.js'%}"></script>
+    <script src="{% static 'scripts/custom_js.js'%}"></script>
+    <script src="{% static 'scripts/news.js'%}"></script>
+
+
+
+    <!-- Style Switcher
+================================================== -->
+
+</body>
+
+<!-- Mirrored from www.vasterad.com/themes/trizzy/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2019 16:45:20 GMT -->
+
+</html>
